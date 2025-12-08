@@ -111,6 +111,13 @@
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.556 0 0);
 }
+body {
+  background: url("/background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* optional smooth effect */
+}
 
 @layer base {
   * {
