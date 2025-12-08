@@ -1,12 +1,9 @@
+import Hero from "@/components/Hero";
 
 export default function Home() {
   return (
     <div>
-      {/* hero */}
-      {/* about */}
-      {/* skills */}
-      {/* projects */}
-      {/* contact */}
+      <Hero/>
     </div>
   );
 }
