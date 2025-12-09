@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { TypewriterEffect } from "./ui/typewriter-effect";
+import { Button } from "./ui/button";
 
 function Hero() {
   const words = [
@@ -35,12 +36,20 @@ function Hero() {
             web development.
           </p>
           <TypewriterEffect words={words} className="text-2xl font-semibold" />
+          <div className="flex gap-4">
+            <Button className="" variant="default">Get Started</Button>
+            <Button className="" variant="outline">Contact Me</Button>
+          </div>
         </div>
-        <Image src="/hero.png" alt="hero" width={600} height={600} className="relative top-20 right-20 hidden sm:block" />
+        <Image
+          src="/hero.png"
+          alt="hero"
+          width={600}
+          height={600}
+          className="relative top-20 right-20 hidden sm:block"
+        />
       </div>
-      <div className="flex">
-        
-      </div>
+      <div className="flex"></div>
     </section>
   );
 }

@@ -32,28 +32,28 @@ const SOCIAL_ITEMS: SocialItem[] = [
   {
     title: "GitHub",
     icon: <IconBrandGithub size={22} />,
-    href: "https://github.com/your-username",
+    href: "https://github.com/KerelosNasser",
     bg: "bg-[#181717]",
     shadow: "shadow-[0_0_25px_rgba(24,23,23,0.85)]",
   },
   {
     title: "LinkedIn",
     icon: <IconBrandLinkedin size={22} />,
-    href: "https://linkedin.com/in/your-username",
+    href: "https://www.linkedin.com/in/kero-nasser-608298294/",
     bg: "bg-[#0A66C2]",
     shadow: "shadow-[0_0_25px_rgba(10,102,194,0.85)]",
   },
   {
     title: "WhatsApp",
     icon: <IconBrandWhatsapp size={22} />,
-    href: "https://wa.me/201234567890", // put your number
+    href: "https://wa.me/201211730727",
     bg: "bg-[#25D366]",
     shadow: "shadow-[0_0_25px_rgba(37,211,102,0.85)]",
   },
   {
     title: "Facebook",
     icon: <IconBrandFacebook size={22} />,
-    href: "https://facebook.com/your-username",
+    href: "https://www.facebook.com/kero.nasser.329325",
     bg: "bg-[#1877F2]",
     shadow: "shadow-[0_0_25px_rgba(24,119,242,0.85)]",
   },
