@@ -7,6 +7,7 @@ import { IconArrowRight, IconDownload } from "@tabler/icons-react";
 import Link from "next/link";
 import { EasiIn } from "@/lib/animationPreset";
 import { motion } from "framer-motion";
+import { useSlideshow } from "@/lib/slideshow";
 function Hero() {
   const words = [
     {
@@ -29,6 +30,8 @@ function Hero() {
       className: "text-amber-400",
     },
   ];
+
+  const {start} = useSlideshow();
   return (
     <section>
       <div className='flex'>
@@ -39,7 +42,7 @@ function Hero() {
           {" "}
           <h1 className='text-5xl font-bold'>Hi, I&apos;m Kerolos</h1>
           <p className='text-2xl font-semibold'>
-            I&apos;m a passionate software developer with a strong background in
+            I&apos;m a passionate sof+tware developer with a strong background in
             <br />
             web development.
           </p>
@@ -54,7 +57,8 @@ function Hero() {
               <Button variant='outline'>Contact Me</Button>
             </Link>
           </div>
-          <div className='group flex bg-amber-600 w-24 h-24 rounded-full items-center justify-center p-4 mt-4 cursor-pointer hover:bg-amber-400 duration-300'>
+          <div onClick={start}
+           className='group flex bg-amber-600 w-24 h-24 rounded-full items-center justify-center p-4 mt-4 cursor-pointer hover:bg-amber-400 duration-300'>
             <p>start</p>
             <IconArrowRight className="transition-transform duration-300 ease-in-out group-hover:translate-x-2"/>
           </div>
