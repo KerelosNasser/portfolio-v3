@@ -2,6 +2,8 @@ import React from "react";
 import Image from "next/image";
 import { TypewriterEffect } from "./ui/typewriter-effect";
 import { Button } from "./ui/button";
+import { IconArrowRight, IconDownload } from "@tabler/icons-react";
+import Link from "next/link";
 
 function Hero() {
   const words = [
@@ -37,8 +39,11 @@ function Hero() {
           </p>
           <TypewriterEffect words={words} className="text-2xl font-semibold" />
           <div className="flex gap-4">
-            <Button className="" variant="default">Get Started</Button>
-            <Button className="" variant="outline">Contact Me</Button>
+            <a href="/resume.pdf" download><Button variant="default">Resume <IconDownload/></Button></a>
+            <Link href='/contact'><Button variant="outline">Contact Me</Button></Link>
+          </div>
+          <div className="flex bg-amber-600 w-20 h-20 rounded-full items-center justify-center p-4 mt-4">
+            <IconArrowRight/>
           </div>
         </div>
         <Image
