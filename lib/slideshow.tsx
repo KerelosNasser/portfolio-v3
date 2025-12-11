@@ -21,7 +21,7 @@ type SlideshowContextValue = {
 
 type SlideshowProviderProps = {
   children: ReactNode;
-  interval?: number; 
+  interval?: number;
   slideCount?: number;
 };
 
@@ -34,7 +34,6 @@ export function SlideshowProvider({
   interval = 3000,
   slideCount,
 }: SlideshowProviderProps) {
-
   const [isPlaying, setIsPlaying] = useState(false);
 
   const [index, setIndexInternal] = useState(0);
@@ -55,7 +54,6 @@ export function SlideshowProvider({
   const stop = useCallback(() => setIsPlaying(false), []);
   const next = useCallback(() => setIndex((i) => i + 1), [setIndex]);
   const prev = useCallback(() => setIndex((i) => i - 1), [setIndex]);
-
 
   useEffect(() => {
     if (!isPlaying) return;
@@ -83,7 +81,6 @@ export function SlideshowProvider({
     </SlideshowContext.Provider>
   );
 }
-
 
 export function useSlideshow() {
   const ctx = useContext(SlideshowContext);
