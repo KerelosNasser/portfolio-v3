@@ -1,3 +1,4 @@
+//Hero Section
 "use client";
 import Image from "next/image";
 import { TypewriterEffect } from "@/components/ui/typewriter-effect";

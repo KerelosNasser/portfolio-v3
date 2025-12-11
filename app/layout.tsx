@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import { FloatingDock } from "@/components/ui/floating-dock";
 import { SlideshowProvider } from "@/lib/slideshow";
+import SlideNavigation from "@/components/slides/slideNavigationOverlay";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -33,8 +34,11 @@ export default function RootLayout({
         <Navbar />
             <SlideshowProvider interval={3500} slideCount={5}>
         {children}
+        <SlideNavigation/>
             </SlideshowProvider>
+            <div className="fixed bottom-8 right-8 z-40 sm:bottom-8 sm:left-0 ">
         <FloatingDock />
+        </div>
       </body>
     </html>
   );
