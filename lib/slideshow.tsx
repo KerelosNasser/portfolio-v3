@@ -52,18 +52,40 @@ export function SlideshowProvider({
 
   const start = useCallback(() => setIsPlaying(true), []);
   const stop = useCallback(() => setIsPlaying(false), []);
-  const next = useCallback(() => setIndex((i) => i + 1), [setIndex]);
-  const prev = useCallback(() => setIndex((i) => i - 1), [setIndex]);
+  const next = useCallback(() => {
+    setIndexInternal((i) => {
+      const newIndex = i + 1;
+      if (typeof slideCount === "number" && slideCount > 0) {
+        return ((newIndex % slideCount) + slideCount) % slideCount;
+      }
+      return newIndex;
+    });
+  }, [slideCount]);
+  const prev = useCallback(() => {
+    setIndexInternal((i) => {
+      const newIndex = i - 1;
+      if (typeof slideCount === "number" && slideCount > 0) {
+        return ((newIndex % slideCount) + slideCount) % slideCount;
+      }
+      return newIndex;
+    });
+  }, [slideCount]);
 
   useEffect(() => {
     if (!isPlaying) return;
 
     const id = setInterval(() => {
-      setIndex((i) => i + 1);
+      setIndexInternal((i) => {
+        const newIndex = i + 1;
+        if (typeof slideCount === "number" && slideCount > 0) {
+          return ((newIndex % slideCount) + slideCount) % slideCount;
+        }
+        return newIndex;
+      });
     }, interval);
 
     return () => clearInterval(id);
-  }, [isPlaying, interval, setIndex]);
+  }, [isPlaying, interval, slideCount]);
 
   const value: SlideshowContextValue = {
     isPlaying,
