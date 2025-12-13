@@ -3,37 +3,81 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { EasiIn } from "@/lib/animationPreset";
-import { useSlideshow } from "@/lib/slideshow";
 import {
   IconBrandGithub,
   IconExternalLink,
-  IconArrowRight,
 } from "@tabler/icons-react";
 
 const projects = [
   {
-    title: "E-Commerce Platform",
+    title: "Driving School V2",
     description:
-      "Full-stack online store with payment integration and admin dashboard.",
-    tech: ["Next.js", "TypeScript", "Stripe"],
-    github: "#",
+      "Comprehensive driving school platform for scheduling and student management.",
+    tech: ["Next.js", "React", "Tailwind CSS"],
+    github: "https://github.com/KerelosNasser/eg-driving-school",
+    live: "https://eg-driving-school-hn6w4kfc2-kerelosnassers-projects.vercel.app",
+  },
+  {
+    title: "Driving School V1",
+    description:
+      "Admin dashboard for managing driving school operations and instructors.",
+    tech: ["Next.js", "TypeScript", "Tailwind CSS"],
+    github: "https://github.com/KerelosNasser/driving-school",
+    live: "https://driving-school-sage.vercel.app/",
+  },
+  {
+    title: "Signalist",
+    description: "Real-time stock market tracking and analysis application.",
+    tech: ["Next.js", "React", "API Integration"],
+    github: "https://github.com/KerelosNasser/signalist",
     live: "#",
   },
   {
-    title: "Task Management App",
-    description:
-      "Real-time collaborative task manager with drag-and-drop functionality.",
-    tech: ["React", "Node.js", "Socket.io"],
-    github: "#",
-    live: "#",
+    title: "Calendly Clone",
+    description: "Scheduling automation tool for efficient meeting management.",
+    tech: ["React", "Node.js", "Full Stack"],
+    github: "https://github.com/KerelosNasser/calendly-clone",
+    live: "https://calendly-clone-lbswnr408-kerelosnassers-projects.vercel.app/",
   },
   {
-    title: "Portfolio Website",
+    title: "SaaS App",
     description:
-      "Modern portfolio with smooth animations and interactive slideshows.",
-    tech: ["Next.js", "Framer Motion", "Tailwind"],
-    github: "#",
-    live: "#",
+      "Multi-tenant SaaS application foundation with authentication and billing.",
+    tech: ["Next.js", "Stripe", "Tailwind CSS", "Vapi SDK"],
+    github: "https://github.com/KerelosNasser/saas-app",
+    live: "https://saas-kfv2i2be3-kerelosnassers-projects.vercel.app",
+  },
+  {
+    title: "Advanced E-Commerce",
+    description:
+      "Feature-rich online shopping platform with cart and checkout functionalities.",
+    tech: ["Next.js", "Redux", "Payment Gateway"],
+    github: "https://github.com/KerelosNasser/advanced_e_commerce",
+    live: "https://advanced-e-commerce-onjduf60v-kerelosnassers-projects.vercel.app",
+  },
+  {
+    title: "Portfolio",
+    description: "Personal portfolio website showcasing projects and skills.",
+    tech: ["Next.js", "Framer Motion", "Tailwind CSS"],
+    github: "https://github.com/KerelosNasser/Portfolio",
+    live: "https://portfolio-3f65rerd0-kerelosnassers-projects.vercel.app",
+  },
+  {
+    title: "Little Lemon Restaurant",
+    description:
+      "Restaurant website with reservation table feature (Meta Frontend Capstone).",
+    tech: ["React", "UI/UX Design"],
+    github:
+      "https://github.com/KerelosNasser/little-lemon-meta-frontend-capstone-main",
+    live: "https://little-lemon-meta-frontend-capstone-main-pdgdpebwt.vercel.app",
+  },
+  {
+    title: "Environment Dashboard",
+    description:
+      "Interactive dashboard for monitoring environmental data and metrics.",
+    tech: ["React", "D3.js", "Chart.js"],
+    github: "https://github.com/KerelosNasser/Enviroment-Dashboard",
+    live: "https://enviroment-dashboard-9ll1nxi7s-kerelosnassers-projects.vercel.app",
   },
 ];
 
@@ -51,10 +95,8 @@ const itemVariants = {
 };
 
 export default function Slide2() {
-  const { next } = useSlideshow();
-
   return (
-    <motion.div {...EasiIn} className="w-full px-4 sm:px-0">
+    <motion.div {...EasiIn} className="w-full px-2 sm:px-12">
       <h2 className="text-3xl sm:text-4xl font-bold mb-2">Projects</h2>
       <p className="text-amber-400 text-lg mb-6">What I&apos;ve built</p>
 
@@ -62,7 +104,7 @@ export default function Slide2() {
         variants={containerVariants}
         initial="hidden"
         animate="visible"
-        className="flex flex-col gap-4 max-w-2xl"
+        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4 max-w-full"
       >
         {projects.map((project) => (
           <motion.div
@@ -77,12 +119,16 @@ export default function Slide2() {
               <div className="flex gap-3">
                 <a
                   href={project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-amber-50/60 hover:text-amber-400 transition-colors"
                 >
                   <IconBrandGithub className="w-5 h-5" />
                 </a>
                 <a
                   href={project.live}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-amber-50/60 hover:text-amber-400 transition-colors"
                 >
                   <IconExternalLink className="w-5 h-5" />
@@ -105,14 +151,6 @@ export default function Slide2() {
           </motion.div>
         ))}
       </motion.div>
-
-      <div
-        onClick={next}
-        className="group flex bg-amber-600 w-20 h-20 sm:w-24 sm:h-24 rounded-full items-center justify-center p-4 mt-6 cursor-pointer hover:bg-amber-400 transition-colors duration-300"
-      >
-        <p className="text-sm sm:text-base">next</p>
-        <IconArrowRight className="w-4 h-4 sm:w-5 sm:h-5 transition-transform duration-300 ease-in-out group-hover:translate-x-2" />
-      </div>
     </motion.div>
   );
 }
