@@ -1,6 +1,7 @@
 "use client";
 import { useSlideshow } from "@/lib/slideshow";
 import { slideComponents } from "@/components/slides";
+import SlideNavigation from "@/components/slides/slideNavigationOverlay";
 
 function Home() {
   const { index } = useSlideshow();
@@ -22,6 +23,7 @@ function Home() {
           <SlideComponent />
         </div>
       </div>
+      <SlideNavigation />
     </section>
   );
 }

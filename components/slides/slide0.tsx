@@ -5,13 +5,12 @@ import { TypewriterEffect } from "@/components/ui/typewriter-effect";
 import { Button } from "@/components/ui/button";
 import { IconArrowRight, IconDownload } from "@tabler/icons-react";
 import Link from "next/link";
-import { useSlideshow } from "@/lib/slideshow";
 import { motion } from "framer-motion";
 import { EasiIn } from "@/lib/animationPreset";
+import { useSlideshow } from "@/lib/slideshow";
 
 export default function Slide0() {
   const { next } = useSlideshow();
-
   return (
     <>
       <div className="flex items-center justify-center">
