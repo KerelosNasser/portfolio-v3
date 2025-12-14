@@ -9,7 +9,7 @@ import { motion } from "framer-motion";
 import { EasiIn } from "@/lib/animationPreset";
 import { useSlideshow } from "@/lib/slideshow";
 
-export default function Slide0() {
+export default function Slide() {
   const { next } = useSlideshow();
   return (
     <>
