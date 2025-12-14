@@ -16,7 +16,7 @@ export default function Slide() {
       <div className="flex items-center justify-center">
         <motion.div
           {...EasiIn}
-          className="flex flex-col items-center justify-center gap-8 sm:items-start mt-30 sm:mt-0"
+          className="flex flex-col items-center justify-center gap-8 px-4 sm:items-start mt-35 sm:mt-20"
         >
           <h1 className="text-5xl font-bold">Hi, I&#39;m Kerolos</h1>
           <p className="text-2xl font-semibold">
@@ -49,7 +49,7 @@ export default function Slide() {
             onClick={next}
             className="group flex bg-amber-600 w-24 h-24 rounded-full items-center justify-center p-4 mt-4 cursor-pointer hover:bg-amber-400 duration-300"
           >
-            <p>next</p>
+            <p>Start</p>
             <IconArrowRight className="transition-transform duration-300 ease-in-out group-hover:translate-x-2" />
           </div>
         </motion.div>
