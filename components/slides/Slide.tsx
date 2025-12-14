@@ -16,7 +16,7 @@ export default function Slide() {
       <div className="flex items-center justify-center">
         <motion.div
           {...EasiIn}
-          className="flex flex-col items-center justify-center gap-8 px-4 sm:items-start mt-35 sm:mt-20"
+          className="flex flex-col items-center justify-center gap-8 sm:items-start mt-16 sm:mt-20"
         >
           <h1 className="text-5xl font-bold">Hi, I&#39;m Kerolos</h1>
           <p className="text-2xl font-semibold">

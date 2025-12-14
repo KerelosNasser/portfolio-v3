@@ -49,43 +49,158 @@ const skillGroups = [
 
 const skills = [
   // Frontend Frameworks
-  { name: "React", icon: IconBrandReact, color: "text-cyan-400", category: "frontend" },
-  { name: "Next.js", icon: IconBrandNextjs, color: "text-white", category: "frontend" },
-  { name: "Tailwind", icon: IconBrandTailwind, color: "text-teal-400", category: "frontend" },
+  {
+    name: "React",
+    icon: IconBrandReact,
+    color: "text-cyan-400",
+    category: "frontend",
+  },
+  {
+    name: "Next.js",
+    icon: IconBrandNextjs,
+    color: "text-white",
+    category: "frontend",
+  },
+  {
+    name: "Tailwind",
+    icon: IconBrandTailwind,
+    color: "text-teal-400",
+    category: "frontend",
+  },
 
   // Languages
-  { name: "TypeScript", icon: IconBrandTypescript, color: "text-blue-400", category: "language" },
+  {
+    name: "TypeScript",
+    icon: IconBrandTypescript,
+    color: "text-blue-400",
+    category: "language",
+  },
 
   // Backend/Runtime
-  { name: "Node.js", icon: IconBrandNodejs, color: "text-green-500", category: "backend" },
-  { name: "GraphQL", icon: SvgIcon("/Icons/graphql.svg"), color: "text-pink-600", category: "backend" },
+  {
+    name: "Node.js",
+    icon: IconBrandNodejs,
+    color: "text-green-500",
+    category: "backend",
+  },
+  {
+    name: "GraphQL",
+    icon: SvgIcon("/Icons/graphql.svg"),
+    color: "text-pink-600",
+    category: "backend",
+  },
 
   // Databases & ORMs
-  { name: "Supabase", icon: SvgIcon("/Icons/supabase.svg"), color: "text-green-500", category: "database" },
-  { name: "Drizzle", icon: SvgIcon("/Icons/drizzle.svg"), color: "text-yellow-500", category: "database" },
-  { name: "Firebase", icon: SvgIcon("/Icons/firebase.svg"), color: "text-orange-500", category: "database" },
+  {
+    name: "Supabase",
+    icon: SvgIcon("/Icons/supabase.svg"),
+    color: "text-green-500",
+    category: "database",
+  },
+  {
+    name: "Drizzle",
+    icon: SvgIcon("/Icons/drizzle.svg"),
+    color: "text-yellow-500",
+    category: "database",
+  },
+  {
+    name: "Firebase",
+    icon: SvgIcon("/Icons/firebase.svg"),
+    color: "text-orange-500",
+    category: "database",
+  },
 
   // Authentication
-  { name: "Better Auth", icon: SvgIcon("/Icons/betterauth.svg"), color: "text-blue-600", category: "auth" },
-  { name: "Clerk", icon: SvgIcon("/Icons/clerk.svg"), color: "text-purple-500", category: "auth" },
+  {
+    name: "Better Auth",
+    icon: SvgIcon("/Icons/betterauth.svg"),
+    color: "text-blue-600",
+    category: "auth",
+  },
+  {
+    name: "Clerk",
+    icon: SvgIcon("/Icons/clerk.svg"),
+    color: "text-purple-500",
+    category: "auth",
+  },
 
   // DevOps & Cloud
-  { name: "Docker", icon: IconBrandDocker, color: "text-blue-500", category: "devops" },
-  { name: "Vercel", icon: SvgIcon("/Icons/vercel.svg"), color: "text-white", category: "devops" },
-  { name: "Google Cloud", icon: SvgIcon("/Icons/googlecloud.svg"), color: "text-blue-400", category: "devops" },
+  {
+    name: "Docker",
+    icon: IconBrandDocker,
+    color: "text-blue-500",
+    category: "devops",
+  },
+  {
+    name: "Vercel",
+    icon: SvgIcon("/Icons/vercel.svg"),
+    color: "text-white",
+    category: "devops",
+  },
+  {
+    name: "Google Cloud",
+    icon: SvgIcon("/Icons/googlecloud.svg"),
+    color: "text-blue-400",
+    category: "devops",
+  },
 
   // Version Control & Tools
-  { name: "Git", icon: IconBrandGit, color: "text-orange-500", category: "tools" },
-  { name: "Github", icon: IconBrandGithub, color: "text-white", category: "tools" },
-  { name: "Cursor", icon: SvgIcon("/Icons/cursor.svg"), color: "text-black", category: "tools" },
-  { name: "WebStorm", icon: SvgIcon("/Icons/webstorm.svg"), color: "text-yellow-400", category: "tools" },
-  { name: "CodeRabbit", icon: SvgIcon("/Icons/coderabbit.svg"), color: "text-orange-500", category: "tools" },
+  {
+    name: "Git",
+    icon: IconBrandGit,
+    color: "text-orange-500",
+    category: "tools",
+  },
+  {
+    name: "Github",
+    icon: IconBrandGithub,
+    color: "text-white",
+    category: "tools",
+  },
+  {
+    name: "Cursor",
+    icon: SvgIcon("/Icons/cursor.svg"),
+    color: "text-black",
+    category: "tools",
+  },
+  {
+    name: "WebStorm",
+    icon: SvgIcon("/Icons/webstorm.svg"),
+    color: "text-yellow-400",
+    category: "tools",
+  },
+  {
+    name: "CodeRabbit",
+    icon: SvgIcon("/Icons/coderabbit.svg"),
+    color: "text-orange-500",
+    category: "tools",
+  },
 
   // AI & Services
-  { name: "Claude", icon: SvgIcon("/Icons/claude.svg"), color: "text-orange-700", category: "ai" },
-  { name: "n8n", icon: SvgIcon("/Icons/n8n.svg"), color: "text-red-500", category: "automation" },
-  { name: "Resend", icon: SvgIcon("/Icons/resend.svg"), color: "text-white", category: "services" },
-  { name: "Dotenv", icon: SvgIcon("/Icons/dotenv.svg"), color: "text-yellow-500", category: "config" },
+  {
+    name: "Claude",
+    icon: SvgIcon("/Icons/claude.svg"),
+    color: "text-orange-700",
+    category: "ai",
+  },
+  {
+    name: "n8n",
+    icon: SvgIcon("/Icons/n8n.svg"),
+    color: "text-red-500",
+    category: "automation",
+  },
+  {
+    name: "Resend",
+    icon: SvgIcon("/Icons/resend.svg"),
+    color: "text-white",
+    category: "services",
+  },
+  {
+    name: "Dotenv",
+    icon: SvgIcon("/Icons/dotenv.svg"),
+    color: "text-yellow-500",
+    category: "config",
+  },
 ];
 
 const containerVariants = {
@@ -108,7 +223,10 @@ export default function Slide1() {
   const {} = useSlideshow();
 
   return (
-    <motion.div {...EasiIn} className="w-full px-4 mt-20 sm:px-10 max-w-7xl mx-auto">
+    <motion.div
+      {...EasiIn}
+      className="w-full mt-10 sm:px-10 max-w-7xl mx-auto"
+    >
       <div className="mb-10">
         <h2 className="text-3xl sm:text-4xl font-bold mb-2 text-white">
           Skills & Technologies
@@ -120,7 +238,7 @@ export default function Slide1() {
         variants={containerVariants}
         initial="hidden"
         animate="visible"
-        className="space-y-10" // Adds vertical spacing between categories
+        className="space-y-10"
       >
         {skillGroups.map((group) => {
           // Filter skills for this specific group
@@ -131,11 +249,15 @@ export default function Slide1() {
           if (groupSkills.length === 0) return null;
 
           return (
-            <motion.div key={group.title} variants={itemVariants} className="w-full">
+            <motion.div
+              key={group.title}
+              variants={itemVariants}
+              className="w-full"
+            >
               <h3 className="text-xl font-semibold text-white/80 mb-4 border-b border-white/10 pb-2">
                 {group.title}
               </h3>
-              
+
               <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-3 sm:gap-4">
                 {groupSkills.map((skill) => (
                   <motion.div

@@ -49,7 +49,7 @@ export default function Slide3() {
   const { next } = useSlideshow();
 
   return (
-    <motion.div {...EasiIn} className="w-full px-12 mt-10">
+    <motion.div {...EasiIn} className="w-full mt-10">
       <h2 className="text-3xl sm:text-4xl font-bold mb-2">Certifications</h2>
       <p className="text-amber-400 text-lg mb-6">Professional credentials</p>
 

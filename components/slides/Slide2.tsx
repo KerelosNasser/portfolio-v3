@@ -96,7 +96,7 @@ const itemVariants = {
 
 export default function Slide2() {
   return (
-    <motion.div {...EasiIn} className="w-full px-2 sm:px-12">
+    <motion.div {...EasiIn} className="w-full mt-10 sm:px-12">
       <h2 className="text-3xl sm:text-4xl font-bold mb-2">Projects</h2>
       <p className="text-amber-400 text-lg mb-6">What I&apos;ve built</p>
 

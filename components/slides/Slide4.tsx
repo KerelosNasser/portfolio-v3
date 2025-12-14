@@ -37,7 +37,7 @@ const itemVariants = {
 export default function Slide4() {
 
   return (
-    <motion.div {...EasiIn} className="w-full px-8 sm:px-24 mt-10">
+    <motion.div {...EasiIn} className="w-full sm:px-24 mt-10">
       <h2 className="text-3xl sm:text-4xl font-bold mb-2">Interests</h2>
       <p className="text-amber-400 text-lg mb-6">Beyond the code</p>
 
