@@ -37,7 +37,7 @@ const itemVariants = {
 export default function Slide4() {
 
   return (
-    <motion.div {...EasiIn} className="w-full sm:px-24 mt-10">
+    <motion.div {...EasiIn} className="w-full mt-10">
       <h2 className="text-3xl sm:text-4xl font-bold mb-2">Interests</h2>
       <p className="text-amber-400 text-lg mb-6">Beyond the code</p>
 
@@ -45,7 +45,7 @@ export default function Slide4() {
         variants={containerVariants}
         initial="hidden"
         animate="visible"
-        className="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4 max-w-2xl"
+        className="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4 max-w-2xl mr-4"
       >
         {interests.map((interest) => (
           <motion.div
