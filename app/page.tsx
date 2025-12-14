@@ -18,7 +18,7 @@ function Home() {
 
   return (
     <section>
-      <div className="flex mx-auto ml-12">
+      <div className="flex mx-auto ml-5">
         <div className="flex flex-col gap-4 justify-center sm:mt-0 items-start text-amber-50">
           <SlideComponent />
         </div>

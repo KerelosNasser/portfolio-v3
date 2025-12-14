@@ -10,14 +10,6 @@ import {
 
 const projects = [
   {
-    title: "Driving School V2",
-    description:
-      "Comprehensive driving school platform for scheduling and student management.",
-    tech: ["Next.js", "React", "Tailwind CSS"],
-    github: "https://github.com/KerelosNasser/eg-driving-school",
-    live: "https://eg-driving-school-hn6w4kfc2-kerelosnassers-projects.vercel.app",
-  },
-  {
     title: "Driving School V1",
     description:
       "Admin dashboard for managing driving school operations and instructors.",
@@ -75,7 +67,7 @@ const projects = [
     title: "Environment Dashboard",
     description:
       "Interactive dashboard for monitoring environmental data and metrics.",
-    tech: ["React", "D3.js", "Chart.js"],
+    tech: ["React", "Tailwind CSS", "Chart.js"],
     github: "https://github.com/KerelosNasser/Enviroment-Dashboard",
     live: "https://enviroment-dashboard-9ll1nxi7s-kerelosnassers-projects.vercel.app",
   },
@@ -96,7 +88,7 @@ const itemVariants = {
 
 export default function Slide2() {
   return (
-    <motion.div {...EasiIn} className="w-full mt-10 sm:px-12">
+    <motion.div {...EasiIn} className="w-full mt-10 pr-4 sm:px-12">
       <h2 className="text-3xl sm:text-4xl font-bold mb-2">Projects</h2>
       <p className="text-amber-400 text-lg mb-6">What I&apos;ve built</p>
 
@@ -104,7 +96,7 @@ export default function Slide2() {
         variants={containerVariants}
         initial="hidden"
         animate="visible"
-        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4 max-w-full"
+        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4 max-h-full"
       >
         {projects.map((project) => (
           <motion.div
