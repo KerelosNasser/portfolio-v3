@@ -3,24 +3,22 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { EasiIn } from "@/lib/animationPreset";
-import { useSlideshow } from "@/lib/slideshow";
 import {
   IconCode,
   IconBook,
   IconDeviceGamepad2,
   IconMusic,
   IconCamera,
-  IconPlane,
-  IconArrowRight,
+  IconBrain,
 } from "@tabler/icons-react";
 
 const interests = [
   { name: "Coding", icon: IconCode, description: "Building cool stuff" },
-  { name: "Reading", icon: IconBook, description: "Tech & Sci-Fi books" },
+  { name: "Reading", icon: IconBook, description: "philosophy & self-help books" },
   { name: "Gaming", icon: IconDeviceGamepad2, description: "Strategy games" },
-  { name: "Music", icon: IconMusic, description: "Lo-fi & Electronic" },
+  { name: "Music", icon: IconMusic, description: "Lo-fi & pop" },
   { name: "Photography", icon: IconCamera, description: "Street & Nature" },
-  { name: "Travel", icon: IconPlane, description: "Exploring new places" },
+  { name: "Micro learning", icon: IconBrain, description: "tech content & tutorials" },
 ];
 
 const containerVariants = {
@@ -37,10 +35,9 @@ const itemVariants = {
 };
 
 export default function Slide4() {
-  const { next } = useSlideshow();
 
   return (
-    <motion.div {...EasiIn} className="w-full px-4 sm:px-0">
+    <motion.div {...EasiIn} className="w-full px-8 sm:px-24 mt-10">
       <h2 className="text-3xl sm:text-4xl font-bold mb-2">Interests</h2>
       <p className="text-amber-400 text-lg mb-6">Beyond the code</p>
 
@@ -68,14 +65,6 @@ export default function Slide4() {
           </motion.div>
         ))}
       </motion.div>
-
-      <div
-        onClick={next}
-        className="group flex bg-amber-600 w-20 h-20 sm:w-24 sm:h-24 rounded-full items-center justify-center p-4 mt-6 cursor-pointer hover:bg-amber-400 transition-colors duration-300"
-      >
-        <p className="text-sm sm:text-base">next</p>
-        <IconArrowRight className="w-4 h-4 sm:w-5 sm:h-5 transition-transform duration-300 ease-in-out group-hover:translate-x-2" />
-      </div>
     </motion.div>
   );
 }
